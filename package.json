@@ -14,10 +14,28 @@
   ],
  "activationEvents": [
     "onStartupFinished",
-    "onCommand:your.extension.command" 
+    "onCommand:your.extension.command"
   ],
   "main": "./out/extension.js",
   "contributes": {
+     "viewsContainers": {
+      "activitybar": [
+        {
+          "id": "tabKeeperSidebar",
+          "title": "Tab Keeper",
+          "icon": "resources/icon.svg"
+        }
+      ]
+    },
+    "views": {
+      "tabKeeperSidebar": [
+        {
+          "id": "tabKeeperSettingsView",
+          "name": "Settings",
+          "icon": "resources/icon.svg"
+        }
+      ]
+    },
     "commands": [
       {
         "command": "tk.helloWorld",
